@@ -30,7 +30,7 @@
 
 以下のURLのコードをテンプレートとして利用して下さい。
 
-- [codegrit-html-css-ch07-starter](https://github.com/codegrit-jp-students/codegrit-html-css-ch09-starter)
+- [codegrit-html-css-ch09-starter](https://github.com/codegrit-jp-students/codegrit-html-css-ch09-starter)
 
 ## マイルストーン
 
