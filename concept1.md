@@ -41,6 +41,8 @@ input要素の中で最もよく使うのがテキストインプットです。
 
 ![テキストインプット1](./images/text-input.png)
 
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/3qes8db4/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 [サンプルコード](https://github.com/codegrit-jp-students/codegrit-html-css-lesson09-samples/blob/master/text-input1.html)
 
 ### type属性
@@ -64,6 +66,8 @@ input要素の中で最もよく使うのがテキストインプットです。
 
 ![placeholder属性](./images/placeholder2.png)
 
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/r82z4ngc/1/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 [サンプルコード](https://github.com/codegrit-jp-students/codegrit-html-css-lesson09-samples/blob/master/text-input2.html)
 
 上記の画像のようにInput欄の長さを調整しないと途中で切れてしまうので注意してください。
@@ -83,6 +87,8 @@ input要素の中で最もよく使うのがテキストインプットです。
 
 ![テキストエリア要素](./images/textarea1.png)
 
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/8v92u1tx/1/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 [サンプルコード](https://github.com/codegrit-jp-students/codegrit-html-css-lesson09-samples/blob/master/textarea.html)
 
 ## チェックボックス
@@ -99,6 +105,8 @@ input要素の中で最もよく使うのがテキストインプットです。
 
 ![チェックボックス1](./images/checkbox1.png)
 
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/qbp78rsw/1/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 [サンプルコード](https://github.com/codegrit-jp-students/codegrit-html-css-lesson09-samples/blob/master/checkbox1.html)
 
 2. 複数の選択肢で当てはまるもの全て選択
@@ -107,11 +115,13 @@ input要素の中で最もよく使うのがテキストインプットです。
 <p>プログラミングを学ぶ動機を教えてください(複数選択可)</p>
 <input type="checkbox" name="reasons" id="service"><label for="service">自分のサービスを作成するため</label>
 <input type="checkbox" name="reasons" id="job"><label for="job">エンジニアとして就職/転職するため</label>
-<input type="checkbox" name="reasons" id="communication"><label for="communication">エンジニアと対等にコミュニケーショを取るため</label>
+<input type="checkbox" name="reasons" id="communication"><label for="communication">エンジニアと対等にコミュニケーションを取るため</label>
 ...
 ```
 
 ![チェックボックス2](./images/checkbox2.png)
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/dt2eg7ob/1/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 [サンプルコード](https://github.com/codegrit-jp-students/codegrit-html-css-lesson09-samples/blob/master/checkbox2.html)
 
@@ -132,6 +142,8 @@ input要素の中で最もよく使うのがテキストインプットです。
 ```
 
 ![ラジオボタン1](./images/radio1.png)
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/q0brx19m/2/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 [サンプルコード](https://github.com/codegrit-jp-students/codegrit-html-css-lesson09-samples/blob/master/radio1.html)
 
@@ -154,6 +166,8 @@ input要素の中で最もよく使うのがテキストインプットです。
 
 ![セレクト1](./images/select1.png)
 
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/5hzqju6g/1/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 [サンプルコード](https://github.com/codegrit-jp-students/codegrit-html-css-lesson09-samples/blob/master/select1.html)
 
 さて、ここで注目をしていただきたいのは、`value`属性です。この属性はフォームを提出する際にどのオプションが選ばれたのかを知るために利用します。このvalueは、セレクトだけではなく、他の`input`要素などでも利用するので、後ほど「フォーム提出の仕組み」の項目で詳しく説明していきます。
@@ -169,3 +183,59 @@ input要素の中で最もよく使うのがテキストインプットです。
 ```html
 <button type="submit">登録する</button>
 ```
+
+## フォームのスタイリング
+
+フォームをCSSでスタイリングするにはこれまでと少し違ったテクニックが必要になります。
+
+### input要素をタイプごとにスタイリングする
+
+input要素にはこれまで見たとおりemail、password、checkboxなど様々なタイプがあります。こうしたそれぞれのtypeについてスタイリングを変更したい場合には以下のようにします。
+
+例えば、以下はtype属性が"email"のときのスタイリング例です。
+
+```css
+input[type=email] {
+  color: red;
+}
+```
+
+このようにCSSでは
+
+```css
+セレクター[<属性>=<値>] {
+  ...
+}
+```
+
+というように、属性を指定に利用することが出来ます。
+
+フォームのスタイリングではこの属性を利用した指定を多く使うことになります。
+
+### placeholderをスタイリングする
+
+placeholderをスタイリングしたい場合には以下のように書きます。
+
+```css
+input[type=text]::-webkit-input-placeholder {
+  color: red;
+}
+input[type=text]::-moz-placeholder {
+  color: red;
+}
+```
+
+```html
+<form>
+  <label for="name">;名前</label>;
+  <input type="text" placeholder="名前を入力してください">;
+</form>
+```
+
+すると次のようにplaceholderが赤色で表示されます。
+
+![placeholderスタイリング例](./images/placeholder.png)
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/jo4tx6dm/2/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+[サンプルコード](https://github.com/codegrit-jp-students/codegrit-html-css-lesson09-samples/tree/master/placeholder-styling)

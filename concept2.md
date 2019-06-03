@@ -93,65 +93,10 @@ user-email="入力されたメールアドレス"
   <fieldset>
     <legend>;よく使うメールアドレスを入力して下さい。</legend>;
     <label for="email">;メールアドレス</label>;
-    <iput type="email" name="user-email">;
+    <input type="email" name="user-email">;
   </fieldset>;
 </form>
 ```
-
-## フォームのスタイリング
-
-フォームをCSSでスタイリングするにはこれまでと少し違ったテクニックが必要になります。
-
-### input要素をタイプごとにスタイリングする
-
-input要素にはこれまで見たとおりemail、password、checkboxなど様々なタイプがあります。こうしたそれぞれのtypeについてスタイリングを変更したい場合には以下のようにします。
-
-例えば、以下はtype属性が"email"のときのスタイリング例です。
-
-```css
-input[type=email] {
-  color: red;
-}
-```
-
-このようにCSSでは
-
-```css
-セレクター[<属性>=<値>] {
-  ...
-}
-```
-
-というように、属性を指定に利用することが出来ます。
-
-フォームのスタイリングではこの属性を利用した指定を多く使うことになります。
-
-### placeholderをスタイリングする
-
-placeholderをスタイリングしたい場合には以下のように書きます。
-
-
-```css
-input[type=text]::-webkit-input-placeholder {
-  color: red;
-}
-input[type=text]::-moz-placeholder {
-  color: red;
-}
-```
-
-```html
-<form>
-  <label for="name">;名前</label>;
-  <input type="text" placeholder="名前を入力してください">;
-</form>
-```
-
-すると次のようにplaceholderが赤色で表示されます。
-
-![placeholderスタイリング例](./images/placeholder.png)
-
-[サンプルコード](https://github.com/codegrit-jp-students/codegrit-html-css-lesson09-samples/tree/master/placeholder-styling)
 
 ## 更に学ぼう
 
