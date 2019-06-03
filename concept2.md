@@ -59,12 +59,12 @@ method属性には`post`、`get`のいずれかのメソッドを指定します
 ```html
 <form action="/somewhere" method="post">
   <div>
-    <label for="name">名前</lable>
+    <label for="name">名前</label>
     <input type="text" name="user-name">
   </div>
   <div>
     <label for="email">メールアドレス</label>
-    <iput type="email" name="user-email">
+    <input type="email" name="user-email">
   </div>
 </form>
 ```
@@ -87,16 +87,18 @@ user-email="入力されたメールアドレス"
 <form action="/somewhere" method="post">
   <fieldset>
     <legend>名前を全角で入力してください。</legend>
-    <label for="name">名前</lable>
-    <input type="text" name="user-name">;
+    <label for="name">名前</label>
+    <input type="text" name="user-name">
   </fieldset>
   <fieldset>
-    <legend>;よく使うメールアドレスを入力して下さい。</legend>;
-    <label for="email">;メールアドレス</label>;
-    <input type="email" name="user-email">;
-  </fieldset>;
+    <legend>よく使うメールアドレスを入力して下さい。</legend>
+    <label for="email">メールアドレス</label>
+    <input type="email" name="user-email">
+  </fieldset>
 </form>
 ```
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/zf7dwckp/2/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ## 更に学ぼう
 
